@@ -204,5 +204,6 @@ term:
 
 clean:
 	$(Q) rm -rf $(BUILD_DIR)
+	$(Q) rm -rf $(BUILD_BASE)/*.a $(BUILD_BASE)/*.out
 	$(Q) rm -rf $(FIRMWARE_BASE)
 $(foreach bdir,$(BUILD_DIR),$(eval $(call compile-objects,$(bdir))))
